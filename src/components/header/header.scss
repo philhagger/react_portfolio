@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 40px;
-  color: $off-white;
+  color: $primary-text;
 }
 
 .header__brand {
@@ -24,7 +24,7 @@
 
 .navlinks__link {
   text-decoration: none;
-  color: $off-white;
+  color: $primary-text;
   padding: 10px;
 }
 
@@ -34,7 +34,7 @@
 
 .active {
   background: $secondary;
-  color: $dark-grey;
+  color: $secondary-text;
 }
 
 .header__persona {

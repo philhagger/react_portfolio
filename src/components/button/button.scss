@@ -1,0 +1,58 @@
+@import '../../App.scss';
+
+.btn {
+  padding: 7.5px 15px;
+  margin: 5px 10px;
+  box-shadow: $light-grey 4px 4px 3px -3px;
+  border: 3px solid darken($light-grey, 15%);
+  background: $light-grey;
+  color: $dark-grey;
+}
+
+.btn:hover {
+  border-color: $light-grey;
+  background: lighten($light-grey, 5%);
+}
+
+.btn--primary {
+  border-color: darken($primary, 5%);
+  background: $primary;
+  color: $primary-text;
+}
+
+.btn--primary:hover {
+  border-color: $primary;
+  background: lighten($primary, 5%);
+}
+
+.btn--secondary {
+  border-color: darken($secondary, 5%);
+  background: $secondary;
+  color: $secondary-text;
+}
+
+.btn--secondary:hover {
+  border-color: $secondary;
+  background: lighten($secondary, 5%);
+}
+
+.btn--disabled {
+  border-color: $light-grey;
+  cursor: default;
+  background: lighten($light-grey, 10%);
+  color: lighten($dark-grey, 40%);
+}
+
+.btn--primary:hover.btn--disabled:hover {
+  background: lighten($light-grey, 10%);
+  border-color: $light-grey;
+}
+
+.btn--secondary:hover.btn--disabled:hover {
+  background: lighten($light-grey, 10%);
+  border-color: $light-grey;
+}
+
+.btn--disabled:hover {
+  background: lighten($light-grey, 10%);
+}

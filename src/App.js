@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import 'normalize-css';
 import './App.scss';
@@ -14,7 +14,7 @@ import UserProfile from './pages/UserProfile';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <Router>
         <div>
           <Header />
           <Switch>
@@ -24,7 +24,7 @@ class App extends Component {
             <Route component={NotFound} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
