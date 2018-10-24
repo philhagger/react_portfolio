@@ -10,8 +10,9 @@
 }
 
 .header__brand {
-  padding: 10px;
-  text-decoration: none;
+  // background-color: $secondary;
+  // border-right: 5px solid $tertiary;
+  padding: 11px;
   color: inherit;
 }
 
@@ -43,5 +44,9 @@
 
 .header__persona {
   height: 100%;
+  background-color: $tertiary;
   border-left: 5px solid $secondary;
+}
+.header__persona:hover {
+  background: lighten($tertiary, 5%);
 }

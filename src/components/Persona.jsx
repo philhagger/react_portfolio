@@ -1,21 +1,23 @@
-import React from 'react';
-import Bubble from './Bubble';
+import React, { Component } from 'react';
 
-import './persona/persona.scss';
-// import userPicture from './persona/me.jpg';
+import PersonaView from './persona/PersonaView';
 
-// const personaImg = {
-//   width: '25px',
-//   borderRadius: '10px'
-// };
+class PersonaContainer extends Component {
+  state = {
+    user: { name: 'Phil Hagger' }
+  };
+  componentDidMount() {
+    const url = 'https://jsonplaceholder.typicode.com/users/7';
+    fetch(url)
+      .then(response => response.json())
+      .then(user => {
+        console.log('User:', user);
+        this.setState({ user });
+      });
+  }
+  render() {
+    return <PersonaView user={this.state.user} initials={this.state.initials} />;
+  }
+}
 
-const Persona = ({ user, ...props }) => (
-  <div className="persona">
-    <span {...props} className="persona__text">
-      {user.name}
-    </span>
-    <Bubble name={user.name} />
-  </div>
-);
-
-export default Persona;
+export default PersonaContainer;

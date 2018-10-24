@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.input {
+  padding: 5px;
+  border: 2px solid darken($light-grey, 15%);
+  background: $off-white;
+  color: $dark-grey;
+}
+
+.input:focus {
+  background-color: lighten($tertiary, 55%);
+  outline: 3px solid lighten($tertiary, 5%);
+}
+
+.input--primary {
+  border-color: $tertiary;
+  background-color: lighten($tertiary, 50%);
+  color: darken($tertiary, 30%);
+}
+
+.input--primary:focus {
+  outline-color: lighten($secondary, 10%);
+}

@@ -1,9 +1,14 @@
 @import '../../App.scss';
 
 .persona {
-  padding: 10px;
+  padding: 11px;
 }
 
 .persona__text {
   color: $primary-text;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

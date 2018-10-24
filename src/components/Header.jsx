@@ -2,26 +2,26 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 import './header/header.scss';
-import PersonaWrapper from '../containers/PersonaWrapper';
+import Persona from './Persona';
 
 const Header = () => (
   <div className="header">
-    <Link to="/" className="header__brand">
-      Test
-    </Link>
+    <div className="header__brand">
+      <Link to="/">Is this for me?</Link>
+    </div>
     <div className="header__navlinks">
       <NavLink className="navlinks__link" to="/tv">
         TV
       </NavLink>
       <NavLink className="navlinks__link" to="/films">
-        Buttons
+        Films
       </NavLink>
       <NavLink className="navlinks__link" to="/games">
         Games
       </NavLink>
     </div>
     <div className="header__persona">
-      <PersonaWrapper />
+      <Persona />
     </div>
   </div>
 );
