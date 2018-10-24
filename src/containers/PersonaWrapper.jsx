@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Persona from '../components/Persona/Persona';
+import Persona from '../components/Persona';
 
 export default class PersonaContainer extends Component {
   state = {

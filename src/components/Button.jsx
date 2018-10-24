@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './button.scss';
+import './button/button.scss';
 
 export const Button = ({ className, disabled, ...props }) => <button type="button" className={`btn ${className} ${disabled && 'btn--disabled'}`} {...props} />;
 

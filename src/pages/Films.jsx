@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, PrimaryButton, SecondaryButton } from '../components/Button/Button';
+import { Button, PrimaryButton, SecondaryButton } from '../components/Button';
 
 const Films = () => (
   <div>
