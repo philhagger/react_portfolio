@@ -14,6 +14,10 @@
   background: lighten($light-grey, 5%);
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn--primary {
   border-color: darken($tertiary, 5%);
   background: $tertiary;

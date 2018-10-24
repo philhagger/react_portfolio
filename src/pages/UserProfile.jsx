@@ -17,20 +17,14 @@ class UserProfile extends Component {
     return (
       <div>
         <h2>User Profile</h2>
-        <Input type="text" />
-        <Input type="text" />
-        <Input type="text" />
-        <Input type="text" />
-        <div>
-          <label>Name:</label> {this.state.user.name}
-          <br />
-          <label>Email:</label> {this.state.user.email}
-          <br />
-          <label>Mobile:</label> {this.state.user.phone}
-          <br />
-          <label>URL:</label> {this.state.user.website}
-          <br />
-        </div>
+        <label>Name:</label>
+        <Input type="text" value={this.state.user.name} />
+        <label>Email:</label>
+        <Input type="text" value={this.state.user.email} />
+        <label>Mobile:</label>
+        <Input type="text" value={this.state.user.phone} />
+        <label>URL:</label>
+        <Input type="text" value={this.state.user.website} />
       </div>
     );
   }
