@@ -9,12 +9,12 @@ import './persona/persona.scss';
 //   borderRadius: '10px'
 // };
 
-const Persona = ({ user, initials, ...props }) => (
+const Persona = ({ user, ...props }) => (
   <div className="persona">
     <span {...props} className="persona__text">
       {user.name}
     </span>
-    <Bubble initials={initials} />
+    <Bubble name={user.name} />
   </div>
 );
 
