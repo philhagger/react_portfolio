@@ -6,7 +6,7 @@ import Persona from '../components/Persona';
 
 const Films = () => (
   <div>
-    <h3>Films</h3>
+    <h3>Buttons</h3>
     <Button onClick={() => console.log('Button clicked!')}>Default Button</Button>
     <Button className="btn--disabled">Disabled Button</Button>
     <PrimaryButton onClick={() => console.log('Primary Button clicked!')}>Primary Button</PrimaryButton>

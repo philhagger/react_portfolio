@@ -1,0 +1,9 @@
+@import '../../../App.scss';
+
+.bubble {
+  background: $tertiary;
+  color: $primary-text;
+  padding: 7px 4px;
+  border-radius: 15px;
+  margin-left: 5px;
+}

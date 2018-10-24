@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Bubble from './persona/Bubble';
 
 import './persona/persona.scss';
+// import userPicture from './persona/me.jpg';
 
-import userPicture from './persona/me.jpg';
+// const personaImg = {
+//   width: '25px',
+//   borderRadius: '10px'
+// };
 
-const personaImg = {
-  width: '25px',
-  borderRadius: '10px'
-};
+const Persona = ({ user, initials, ...props }) => (
+  <div className="persona">
+    <span {...props} className="persona__text">
+      {user.name}
+    </span>
+    <Bubble initials={initials} />
+  </div>
+);
 
-export default class Persona extends Component {
-  state = {};
-  render() {
-    return (
-      <div className="persona">
-        <img src={userPicture} style={personaImg} className="persona__img" alt="User profile" />
-        <span className="persona__text">Phil Hagger</span>
-      </div>
-    );
-  }
-}
+export default Persona;

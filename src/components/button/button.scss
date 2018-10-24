@@ -15,14 +15,14 @@
 }
 
 .btn--primary {
-  border-color: darken($primary, 5%);
-  background: $primary;
+  border-color: darken($tertiary, 5%);
+  background: $tertiary;
   color: $primary-text;
 }
 
 .btn--primary:hover {
-  border-color: $primary;
-  background: lighten($primary, 5%);
+  border-color: $tertiary;
+  background: lighten($tertiary, 5%);
 }
 
 .btn--secondary {

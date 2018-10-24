@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 import './header/header.scss';
-import Persona from './Persona';
+import PersonaWrapper from '../containers/PersonaWrapper';
 
 const Header = () => (
   <div className="header">
@@ -14,14 +14,14 @@ const Header = () => (
         TV
       </NavLink>
       <NavLink className="navlinks__link" to="/films">
-        Films
+        Buttons
       </NavLink>
       <NavLink className="navlinks__link" to="/games">
         Games
       </NavLink>
     </div>
     <div className="header__persona">
-      <Persona />
+      <PersonaWrapper />
     </div>
   </div>
 );

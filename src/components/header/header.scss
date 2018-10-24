@@ -33,12 +33,6 @@
 }
 
 .active {
-  background: $secondary;
+  background: $tertiary;
   color: $secondary-text;
-}
-
-.header__persona {
-  color: inherit;
-  text-decoration: none;
-  padding: 10px;
 }
