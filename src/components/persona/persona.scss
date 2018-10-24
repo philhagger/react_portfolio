@@ -1,22 +1,7 @@
 @import '../../App.scss';
 
 .persona {
-  height: 100%;
   padding: 10px;
-  border-left: 2px solid $secondary;
-}
-.persona__bubble {
-  border-radius: 40px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  background: $tertiary;
-  display: inline-block;
-  color: $primary;
-}
-.persona__img {
-  // width: 25px;
-  // border-radius: 5px;
 }
 
 .persona__text {

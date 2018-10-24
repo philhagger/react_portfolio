@@ -1,7 +1,7 @@
 import React from 'react';
-import Bubble from './persona/Bubble';
+import Bubble from '../Bubble/Bubble';
 
-import './persona/persona.scss';
+import './persona.scss';
 // import userPicture from './persona/me.jpg';
 
 // const personaImg = {

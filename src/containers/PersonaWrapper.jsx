@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Persona from '../components/Persona';
+import Persona from '../components/Persona/Persona';
 
 export default class PersonaContainer extends Component {
   state = {
@@ -13,7 +13,6 @@ export default class PersonaContainer extends Component {
       .then(user => {
         console.log('User:', user);
         this.setState({ user });
-        this.setState({ initials: 'KW' });
       });
   }
   render() {

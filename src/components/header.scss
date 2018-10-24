@@ -1,4 +1,4 @@
-@import '../../App.scss';
+@import '../App.scss';
 
 .header {
   background: $primary;
@@ -32,7 +32,16 @@
   border-bottom: 5px solid $secondary;
 }
 
+.navlinks__link:hover.active {
+  border-bottom: none;
+}
+
 .active {
   background: $tertiary;
   color: $secondary-text;
+}
+
+.header__persona {
+  height: 100%;
+  border-left: 5px solid $secondary;
 }

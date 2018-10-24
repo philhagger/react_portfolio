@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-import './header/header.scss';
+import './header.scss';
 import PersonaWrapper from '../containers/PersonaWrapper';
 
 const Header = () => (
