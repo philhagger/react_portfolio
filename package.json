@@ -28,6 +28,9 @@
   ],
   "devDependencies": {
     "express": "^4.16.4",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-spsave": "^3.1.1",
     "morgan": "^1.9.1"
   }
 }
