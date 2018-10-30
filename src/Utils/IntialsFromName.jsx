@@ -4,8 +4,8 @@ const InitialsFromName = ({ name = 'Anonymous User' }) => {
   let output = name.split(' ');
   return (
     <span>
-      {output[0][0]}
-      {output[1][0]}
+      {output[0][0].toUpperCase()}
+      {output[1][0].toUpperCase()}
     </span>
   );
 };

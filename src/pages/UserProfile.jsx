@@ -17,7 +17,6 @@ class UserProfile extends Component {
     this.setState({ user: this.props.user });
   };
   handleUpdate = event => {
-    // event.preventDefault();
     this.props.handleUpdate(this.state.user);
   };
   render() {
