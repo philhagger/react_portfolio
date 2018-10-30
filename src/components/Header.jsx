@@ -4,7 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import './header/header.scss';
 import Persona from './Persona';
 
-const Header = () => (
+const Header = props => (
   <div className="header">
     <div className="header__brand">
       <Link to="/">Is this for me?</Link>
@@ -21,7 +21,7 @@ const Header = () => (
       </NavLink>
     </div>
     <div className="header__persona">
-      <Persona />
+      <Persona user={props.user} />
     </div>
   </div>
 );
