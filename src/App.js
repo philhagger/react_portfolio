@@ -16,17 +16,32 @@ class App extends Component {
     user: {}
   };
   componentDidMount() {
-    const url = 'https://jsonplaceholder.typicode.com/users/7';
-    fetch(url)
-      .then(response => response.json())
-      .then(user => {
+    console.log('Fetching data', localStorage);
+    try {
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user) {
         this.setState({ user });
-      });
+      } else {
+        const url = 'https://jsonplaceholder.typicode.com/users/7';
+        fetch(url)
+          .then(response => response.json())
+          .then(user => {
+            this.setState({ user });
+          });
+      }
+    } catch (e) {}
   }
   handleUpdate = user => {
-    console.log(user);
+    console.log('Update', user);
     this.setState({ user: { ...this.state.user, ...user } });
   };
+  componentDidUpdate(prevProps, prevState) {
+    // A quick comparison of the prevState and current state to stop any unnecessary updates.
+    if (JSON.stringify(prevState.user) !== JSON.stringify(this.state.user)) {
+      console.log('Update detected', prevState.user, this.state.user);
+      localStorage.setItem('user', JSON.stringify(this.state.user));
+    }
+  }
   render() {
     return (
       <Router>

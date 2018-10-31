@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Input } from '../components/Input';
-import { PrimaryButton, SecondaryButton } from '../components/Button';
+import { PrimaryButton, SecondaryButton, Button } from '../components/Button';
 
 class UserProfile extends Component {
   //local state holds the user object passed in from props...not sure if this is needed or not
@@ -19,6 +19,10 @@ class UserProfile extends Component {
   handleUpdate = event => {
     this.props.handleUpdate(this.state.user);
   };
+  handleLocalStorageReset = () => {
+    localStorage.clear();
+    console.log('Local storage cleared', localStorage);
+  };
   render() {
     return (
       <div>
@@ -29,6 +33,7 @@ class UserProfile extends Component {
         <Input onChange={this.handleChange} name="email" value={this.state.user.email} type="text" />
         <PrimaryButton onClick={this.handleUpdate}>Update</PrimaryButton>
         <SecondaryButton onClick={this.handleReset}>Reset</SecondaryButton>
+        <Button onClick={this.handleLocalStorageReset}>Clear Local Storage</Button>
       </div>
     );
   }
