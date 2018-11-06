@@ -11,25 +11,14 @@ import Films from './pages/Films';
 import NotFound from './pages/NotFound';
 import UserProfile from './pages/UserProfile';
 
+import { getUserData } from './Utils/UserData';
+
 class App extends Component {
   state = {
     user: {}
   };
   componentDidMount() {
-    console.log('Fetching data', localStorage);
-    try {
-      const user = JSON.parse(localStorage.getItem('user'));
-      if (user) {
-        this.setState({ user });
-      } else {
-        const url = 'https://jsonplaceholder.typicode.com/users/7';
-        fetch(url)
-          .then(response => response.json())
-          .then(user => {
-            this.setState({ user });
-          });
-      }
-    } catch (e) {}
+    getUserData().then(user => this.setState({ user }));
   }
   handleUpdate = user => {
     console.log('Update', user);
@@ -44,6 +33,7 @@ class App extends Component {
   }
   render() {
     return (
+      // Passing the component as an arrow function allows props to be injected. This would probably be better replaced with Redux or similar state control in the long run.
       <Router>
         <div>
           <Header user={this.state.user} />

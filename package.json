@@ -15,7 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "node server/server.js"
+    "serve": "node server/server.js",
+    "json": "json-server --watch server/json-data.js --port 3001"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,10 +28,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "casual": "^1.5.19",
     "express": "^4.16.4",
     "gulp": "^3.9.1",
     "gulp-notify": "^3.2.0",
     "gulp-spsave": "^3.1.1",
+    "json-server": "^0.14.0",
     "morgan": "^1.9.1"
   }
 }
