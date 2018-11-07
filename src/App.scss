@@ -6,3 +6,13 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+// Exporting variables provides access in JavaScript.
+:export {
+  primary: $primary;
+  primary-text: $primary-text;
+  secondary: $secondary;
+  secondary-text: $secondary-text;
+  tertiary: $tertiary;
+  tertiary-text: $tertiary-text;
+}

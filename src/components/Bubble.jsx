@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InitialsFromName from '../Utils/IntialsFromName';
+import InitialsFromName from '../utils/IntialsFromName';
 import './bubble/bubble.scss';
 
 const Bubble = ({ name, image, ...props }) => (

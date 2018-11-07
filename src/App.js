@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import 'normalize-css';
 import './App.scss';
+// import colors from './App.scss'; // These are the variables exported from App.scss.
 
 import Header from './components/Header';
 
@@ -11,14 +12,15 @@ import Films from './pages/Films';
 import NotFound from './pages/NotFound';
 import UserProfile from './pages/UserProfile';
 
-import { getUserData } from './Utils/UserData';
+import { getUserData } from './services/UserData';
 
 class App extends Component {
   state = {
     user: {}
   };
   componentDidMount() {
-    getUserData().then(user => this.setState({ user }));
+    const userId = Math.floor(Math.random() * (1000 * 1) + 1);
+    getUserData(userId).then(user => this.setState({ user }));
   }
   handleUpdate = user => {
     console.log('Update', user);
@@ -35,7 +37,7 @@ class App extends Component {
     return (
       // Passing the component as an arrow function allows props to be injected. This would probably be better replaced with Redux or similar state control in the long run.
       <Router>
-        <div>
+        <div className="autumn-theme">
           <Header user={this.state.user} />
           <Switch>
             <Route exact path="/" component={Home} />
