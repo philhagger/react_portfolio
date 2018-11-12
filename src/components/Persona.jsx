@@ -7,9 +7,11 @@ import './persona/persona.scss';
 const Persona = ({ user, ...props }) => (
   <div className="persona">
     <span {...props} className="persona__text">
-      <Link to="/user">{user.name}</Link>
+      <Link to="/userprofile">
+        {user.firstName} {user.lastName}
+      </Link>
     </span>
-    <Bubble name={user.name} />
+    <Bubble name={`${user.firstName} ${user.lastName}`} />
   </div>
 );
 

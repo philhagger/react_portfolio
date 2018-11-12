@@ -10,9 +10,11 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Films from './pages/Films';
 import NotFound from './pages/NotFound';
+import User from './pages/User';
+import Users from './pages/Users';
 import UserProfile from './pages/UserProfile';
 
-import { getUserData } from './services/UserData';
+import { getDefaultUser } from './services/UserData';
 
 class App extends Component {
   state = {
@@ -20,7 +22,7 @@ class App extends Component {
   };
   componentDidMount() {
     const userId = Math.floor(Math.random() * (1000 * 1) + 1);
-    getUserData(userId).then(user => this.setState({ user }));
+    getDefaultUser(userId).then(user => this.setState({ user }));
   }
   handleUpdate = user => {
     console.log('Update', user);
@@ -41,8 +43,10 @@ class App extends Component {
           <Header user={this.state.user} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/user" component={props => <UserProfile user={this.state.user} handleUpdate={this.handleUpdate} {...props} />} />
+            <Route path="/userprofile" component={props => <UserProfile user={this.state.user} handleUpdate={this.handleUpdate} {...props} />} />
             <Route path="/films" component={Films} />
+            <Route path="/users" component={Users} />
+            <Route path="/user/:id" component={User} />
             <Route component={NotFound} />
           </Switch>
         </div>

@@ -27,8 +27,10 @@ class UserProfile extends Component {
     return (
       <div>
         <h2>User Profile</h2>
-        <label>Name:</label>
-        <Input onChange={this.handleChange} name="name" value={this.state.user.name} type="text" />
+        <label>First Name:</label>
+        <Input onChange={this.handleChange} name="firstName" value={this.state.user.firstName} type="text" />
+        <label>Last Name:</label>
+        <Input onChange={this.handleChange} name="lastName" value={this.state.user.lastName} type="text" />
         <label>Email:</label>
         <Input onChange={this.handleChange} name="email" value={this.state.user.email} type="text" />
         <PrimaryButton onClick={this.handleUpdate}>Update</PrimaryButton>

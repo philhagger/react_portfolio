@@ -11,6 +11,9 @@ const Header = props => (
       <Link to="/">React Portfolio</Link>
     </div>
     <div className="header__navlinks">
+      <NavLink className="navlinks__link" to="/users">
+        Users
+      </NavLink>
       <NavLink className="navlinks__link" to="/tv">
         Misc
       </NavLink>
