@@ -17,10 +17,10 @@ const Header = props => (
       <NavLink className="navlinks__link" to="/modals">
         Modals
       </NavLink>
-      <NavLink className="navlinks__link" to="/films">
-        Components
+      <NavLink className="navlinks__link" to="/buttons">
+        Buttons
       </NavLink>
-      <NavLink className="navlinks__link" to="/games">
+      <NavLink className="navlinks__link" to="/inputs">
         Inputs
       </NavLink>
     </div>

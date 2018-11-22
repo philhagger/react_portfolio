@@ -3,7 +3,7 @@ import { Button, PrimaryButton } from '../Button/Button';
 
 import './modal.scss';
 
-export const Modal = ({ title, overlay = true, overlayClose = true, close, ...props }) => (
+export const Alert = ({ title, overlay = true, overlayClose = true, close, ...props }) => (
   <Fragment>
     {overlay && <div className="modal__overlay" onClick={overlayClose && close} />}
     <div className="modal">
@@ -20,7 +20,7 @@ export const Modal = ({ title, overlay = true, overlayClose = true, close, ...pr
 
 export const Prompt = ({ title, overlay = true, overlayClose = true, close, confirm, ...props }) => (
   <Fragment>
-    {overlay && <div className="modal__overlay" onClick={overlayClose && close} />}
+    {overlay && <div className="modal__overlay" onClick={overlayClose ? close : undefined} />}
     <div className="modal">
       <h3 className="modal__title">{title}</h3>
       <div className="modal__content">{props.children}</div>
@@ -35,5 +35,3 @@ export const Prompt = ({ title, overlay = true, overlayClose = true, close, conf
     </div>
   </Fragment>
 );
-
-export default Modal;

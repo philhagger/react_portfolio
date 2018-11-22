@@ -7,10 +7,11 @@ import './App.scss';
 
 import Header from './components/Header/Header';
 
-import Home from './pages/Home';
-import Films from './pages/Films';
-import Modals from './pages/Modals';
-import NotFound from './pages/NotFound';
+import HomePage from './pages/HomePage';
+import ButtonsPage from './pages/ButtonsPage';
+import InputsPage from './pages/InputsPage';
+import ModalsPage from './pages/ModalsPage';
+import NotFoundPage from './pages/NotFoundPage';
 import User from './pages/User';
 import Users from './pages/Users';
 import UserProfile from './pages/UserProfile';
@@ -43,13 +44,14 @@ class App extends Component {
         <Fragment>
           <Header user={this.state.user} />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={HomePage} />
             <Route path="/userprofile" component={props => <UserProfile user={this.state.user} handleUpdate={this.handleUpdate} {...props} />} />
-            <Route path="/films" component={Films} />
-            <Route path="/modals" component={Modals} />
+            <Route path="/buttons" component={ButtonsPage} />
+            <Route path="/modals" component={ModalsPage} />
+            <Route path="/inputs" component={InputsPage} />
             <Route path="/users" component={Users} />
             <Route path="/user/:id" component={User} />
-            <Route component={NotFound} />
+            <Route component={NotFoundPage} />
           </Switch>
         </Fragment>
       </Router>

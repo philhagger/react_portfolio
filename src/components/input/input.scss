@@ -1,15 +1,18 @@
 @import '../../App.scss';
 
 .input {
-  padding: 5px;
+  // padding: 5px;
+  padding: 8.5px 8.5px;
   border: 2px solid darken($light-grey, 15%);
   background: $off-white;
   color: $dark-grey;
+  box-shadow: $light-grey 4px 4px 3px -3px;
 }
 
 .input:focus {
   background-color: lighten($tertiary, 55%);
   outline: 3px solid lighten($tertiary, 5%);
+  box-shadow: lighten($tertiary, 5%) 4px 4px 3px -3px;
 }
 
 .input--primary {
@@ -20,4 +23,8 @@
 
 .input--primary:focus {
   outline-color: lighten($secondary, 10%);
+  box-shadow: lighten($secondary, 10%) 4px 4px 3px -3px;
+}
+
+.textarea {
 }

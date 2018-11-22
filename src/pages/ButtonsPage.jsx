@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, PrimaryButton, SecondaryButton } from '../components/Button/Button';
 
-const Films = () => (
+const Buttons = () => (
   <div>
     <h3>Components</h3>
     <Button onClick={() => console.log('Button clicked!')}>Default Button</Button>
@@ -11,4 +11,4 @@ const Films = () => (
   </div>
 );
 
-export default Films;
+export default Buttons;
