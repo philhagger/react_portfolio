@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import 'normalize-css';
 import './App.scss';
 // import colors from './App.scss'; // These are the variables exported from App.scss.
 
-import Header from './components/Header';
+import Header from './components/Header/Header';
 
 import Home from './pages/Home';
 import Films from './pages/Films';
+import Modals from './pages/Modals';
 import NotFound from './pages/NotFound';
 import User from './pages/User';
 import Users from './pages/Users';
@@ -39,17 +40,18 @@ class App extends Component {
     return (
       // Passing the component as an arrow function allows props to be injected. This would probably be better replaced with Redux or similar state control in the long run.
       <Router>
-        <div className="autumn-theme">
+        <Fragment>
           <Header user={this.state.user} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/userprofile" component={props => <UserProfile user={this.state.user} handleUpdate={this.handleUpdate} {...props} />} />
             <Route path="/films" component={Films} />
+            <Route path="/modals" component={Modals} />
             <Route path="/users" component={Users} />
             <Route path="/user/:id" component={User} />
             <Route component={NotFound} />
           </Switch>
-        </div>
+        </Fragment>
       </Router>
     );
   }

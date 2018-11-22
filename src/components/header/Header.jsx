@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 
-import './header/header.scss';
-import Persona from './Persona';
+import './header.scss';
+import Persona from '../Persona/Persona';
 
 const Header = props => (
-  <div className="header">
+  <header className="header">
     <div className="header__brand">
       <Link to="/">React Portfolio</Link>
     </div>
@@ -14,8 +14,8 @@ const Header = props => (
       <NavLink className="navlinks__link" to="/users">
         Users
       </NavLink>
-      <NavLink className="navlinks__link" to="/tv">
-        Misc
+      <NavLink className="navlinks__link" to="/modals">
+        Modals
       </NavLink>
       <NavLink className="navlinks__link" to="/films">
         Components
@@ -27,7 +27,7 @@ const Header = props => (
     <div className="header__persona">
       <Persona user={props.user} />
     </div>
-  </div>
+  </header>
 );
 
 Header.propTypes = {

@@ -1,0 +1,42 @@
+@import '../../App.scss';
+
+.modal {
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  box-shadow: 5px 5px 30px darken($off-white, 15%);
+}
+
+.modal__title {
+  background-color: $tertiary;
+  color: $tertiary-text;
+  padding: 10px;
+  margin: 0;
+}
+
+.modal__content {
+  background-color: $off-white;
+  min-height: 100x;
+  padding: 20px;
+}
+
+.modal__footer {
+  background-color: $off-white;
+  padding: 5px 10px;
+  text-align: end;
+}
+
+.modal__button {
+  margin-right: 0;
+}
+$overlay: darken($off-white, 15%);
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparentize($overlay, 0.4);
+}

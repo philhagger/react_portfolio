@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Bubble from './Bubble';
+import Bubble from '../Bubble/Bubble';
 
-import './persona/persona.scss';
+import './persona.scss';
 
 const Persona = ({ user, ...props }) => (
   <div className="persona">

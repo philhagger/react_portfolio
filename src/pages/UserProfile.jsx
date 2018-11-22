@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Input } from '../components/Input';
-import { PrimaryButton, SecondaryButton, Button } from '../components/Button';
+import { Input } from '../components/Input/Input';
+import { PrimaryButton, SecondaryButton, Button } from '../components/Button/Button';
 
 class UserProfile extends Component {
   //local state holds the user object passed in from props...not sure if this is needed or not

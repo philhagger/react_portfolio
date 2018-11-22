@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './button/button.scss';
+import './button.scss';
 
 /**
  * This is a Button component with default styling.
@@ -17,7 +17,7 @@ Button.propTypes = {
   disabled: PropTypes.string
 };
 
-export const PrimaryButton = props => <Button className="btn btn--primary" {...props} />;
+export const PrimaryButton = ({ className, ...props }) => <Button className={`btn btn--primary ${className}`} {...props} />;
 
 export const SecondaryButton = props => <Button className="btn btn--secondary" {...props} />;
 
