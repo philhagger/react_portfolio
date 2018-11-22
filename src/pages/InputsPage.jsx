@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Input, PrimaryInput, TextArea } from '../components/Input/Input';
+import { Input, TextArea } from '../components/Input/Input';
 
 const InputsPage = () => (
   <Fragment>
