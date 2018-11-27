@@ -6,7 +6,7 @@ import './button.scss';
 /**
  * This is a Button component with default styling.
  */
-export const Button = ({ type = 'button', className, disabled = false, ...props }) => <button type={type} className={`btn ${className} ${!disabled || 'btn--disabled'}`} {...props} />;
+export const Button = ({ type = 'button', className, disable = false, ...props }) => <button type={type} className={`btn btn--pulse ${className} ${disable ? 'btn--disabled' : null}`} disabled={disable} {...props} />;
 
 Button.propTypes = {
   /**

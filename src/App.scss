@@ -1,10 +1,19 @@
 @import './styles/base';
+@import './styles/animations';
 @import './styles/colors';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 * {
   font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+  animation-name: pulse;
+  animation-duration: 500ms;
+}
+.btn:disabled {
+  animation-name: none;
 }
 
 // Exporting variables provides access in JavaScript.

@@ -18,6 +18,10 @@ import UserProfile from './pages/UserProfile';
 
 import { getDefaultUser } from './services/UserData';
 
+/**
+ * Main Application
+ * As I am currently not using REDUX the application state would sit here and need to be passed down to each component that required it.
+ */
 class App extends Component {
   state = {
     user: {}
