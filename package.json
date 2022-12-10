@@ -30,7 +30,7 @@
   ],
   "devDependencies": {
     "casual": "^1.5.19",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "gulp": "^3.9.1",
     "gulp-notify": "^3.2.0",
     "gulp-spsave": "^3.1.1",
